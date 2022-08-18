@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="KE.mjs" defer></script>
+  <title>Phonie</title>
+</head>
+
+<body>
+  <div class="logo">
+    <a href="index.html"><img src="./media/Phonie - PNG.png" alt="Logo"></a>
+  </div>
+  <div class="phonie">
+    <p>Input Your Mobile Number</p>
+    <!-- Added Nigeria & Kenyan Country Code -->
+    <span>
+      <select class="Country-code">
+        <option value="+254" id="ke"> &#127472;&#127466; +254 </option>
+      </select>
+      <input type="tel" id="phone" name="phone" placeholder="0XXX XXXX X" required>
+    </span>
+    <div id="messageBox">
+      <img id="airtel" src="./media/airtel-logo.png" alt="airtel-logo">
+      <img id="safari" src="./media/safari-logo.png" alt="safari-logo">
+      <img id="telkom" src="./media/telkom-logo.png" alt="telkom-logo">
+    </div>
+    <p id="text">Input Field Cannot be Empty!</p>
+    <p id="text2"></p>
+    <button class="check">Check</button>
+  </div>
+</body>
+</html>

@@ -1,8 +1,9 @@
-// Array of carrier prefixes
-const mtn = ['0803', '0806', '0703', '0706', '0810', '0813', '0814', '0816', '0903', '0906', '0913', '0916'];
-const glo = ['0805', '0807', '0811', '0705', '0815', '0905', '0915'];
-const airtel = ['0802', '0808', '0812', '0701', '0708', '0902', '0907', '0901', '0912'];
-const $9mobile = ['0809', '0817', '0818', '0908', '0909'];
+// Array of Ghana carrier prefixes
+const glo = ['0023'];
+const mtn = ['0024', '0025', '0054', '0054', '0059'];
+const airteltigo = ['0026', '0027', '0056', '0057'];
+const expresso = ['0028'];
+const vodafone = ['0020', '0050'];
 
 // Getting elements from html doc.
 const userInput = document.querySelector("input");
@@ -11,32 +12,9 @@ const btnClick = document.querySelector("button");
 // Button click event
 btnClick.addEventListener('click', valMobileNum);
 
+
 //  Function to Validate Mobile Number
 function valMobileNum() {
-  for (m of mtn) {
-    if (userInput.value.slice(0, 4) === m) {
-      const carrierIndicator = document.getElementById("messageBox");
-      carrierIndicator.style.display = "flex";
-      carrierIndicator.style.justifyContent = "center";
-      carrierIndicator.style.alignItems = "center";
-      // setting other networks display to none
-      const glo_logo = document.getElementById("glo");
-      glo_logo.style.display = "none";
-      const airtel_logo = document.getElementById("airtel");
-      airtel_logo.style.display = "none";
-      const $9mobile_logo = document.getElementById("_9mobile");
-      $9mobile_logo.style.display = "none";
-      //  done
-      const mtn_logo = document.getElementById("mtn");
-      mtn_logo.style.display = "flex";
-      mtn_logo.style.width = "50px";
-      mtn_logo.style.height = "50px";
-      const warningText = document.getElementById("text");
-      warningText.style.display = "none";
-      const warningText2 = document.getElementById("text2");
-      warningText2.style.display = "none";
-    }
-  };
   for (g of glo) {
     if (userInput.value.slice(0, 4) === g) {
       const carrierIndicator = document.getElementById("messageBox");
@@ -46,10 +24,12 @@ function valMobileNum() {
       // setting other networks display to none
       const mtn_logo = document.getElementById("mtn");
       mtn_logo.style.display = "none";
-      const airtel_logo = document.getElementById("airtel");
-      airtel_logo.style.display = "none";
-      const $9mobile_logo = document.getElementById("_9mobile");
-      $9mobile_logo.style.display = "none";
+      const airteltigo_logo = document.getElementById("airtel");
+      airteltigo_logo.style.display = "none";
+      const expresso_logo = document.getElementById("expresso");
+      expresso_logo.style.display = "none";
+      const vodafone_logo = document.getElementById("vodafone");
+      vodafone_logo.style.display = "none";
       //  done
       const glo_logo = document.getElementById("glo");
       glo_logo.style.display = "flex";
@@ -61,7 +41,35 @@ function valMobileNum() {
       warningText2.style.display = "none";
     }
   };
-  for (a of airtel) {
+
+  for (m of mtn) {
+    if (userInput.value.slice(0, 4) === m) {
+      const carrierIndicator = document.getElementById("messageBox");
+      carrierIndicator.style.display = "flex";
+      carrierIndicator.style.justifyContent = "center";
+      carrierIndicator.style.alignItems = "center";
+      // setting other networks display to none
+      const glo_logo = document.getElementById("glo");
+      glo_logo.style.display = "none";
+      const airteltigo_logo = document.getElementById("airtel");
+      airteltigo_logo.style.display = "none";
+      const expresso_logo = document.getElementById("expresso");
+      expresso_logo.style.display = "none";
+      const vodafone_logo = document.getElementById("vodafone");
+      vodafone_logo.style.display = "none";
+      //  done
+      const mtn_logo = document.getElementById("mtn");
+      mtn_logo.style.display = "flex";
+      mtn_logo.style.width = "50px";
+      mtn_logo.style.height = "50px";
+      const warningText = document.getElementById("text");
+      warningText.style.display = "none";
+      const warningText2 = document.getElementById("text2");
+      warningText2.style.display = "none";
+    }
+  };
+
+  for (a of airteltigo) {
     if (userInput.value.slice(0, 4) === a) {
       const carrierIndicator = document.getElementById("messageBox");
       carrierIndicator.style.display = "flex";
@@ -72,20 +80,50 @@ function valMobileNum() {
       glo_logo.style.display = "none";
       const mtn_logo = document.getElementById("mtn");
       mtn_logo.style.display = "none";
-      const $9mobile_logo = document.getElementById("_9mobile");
-      $9mobile_logo.style.display = "none";
+      const expresso_logo = document.getElementById("expresso");
+      expresso_logo.style.display = "none";
+      const vodafone_logo = document.getElementById("vodafone");
+      vodafone_logo.style.display = "none";
       //  done
-      const airtel_logo = document.getElementById("airtel");
-      airtel_logo.style.display = "flex";
-      airtel_logo.style.width = "110px";
-      airtel_logo.style.height = "30px";
+      const airteltigo_logo = document.getElementById("airtel");
+      airteltigo_logo.style.display = "flex";
+      airteltigo_logo.style.width = "50px";
+      airteltigo_logo.style.height = "50px";
       const warningText = document.getElementById("text");
       warningText.style.display = "none";
       const warningText2 = document.getElementById("text2");
       warningText2.style.display = "none";
     }
   };
-  for (e of $9mobile) {
+
+  for (v of vodafone) {
+    if (userInput.value.slice(0, 4) === v) {
+      const carrierIndicator = document.getElementById("messageBox");
+      carrierIndicator.style.display = "flex";
+      carrierIndicator.style.justifyContent = "center";
+      carrierIndicator.style.alignItems = "center";
+      // setting other networks display to none
+      const glo_logo = document.getElementById("glo");
+      glo_logo.style.display = "none";
+      const airteltigo_logo = document.getElementById("airtel");
+      airteltigo_logo.style.display = "none";
+      const expresso_logo = document.getElementById("expresso");
+      expresso_logo.style.display = "none";
+      const mtn_logo = document.getElementById("mtn");
+      mtn_logo.style.display = "none";
+      //  done
+      const vodafone_logo = document.getElementById("vodafone");
+      vodafone_logo.style.display = "flex";
+      vodafone_logo.style.width = "70px";
+      vodafone_logo.style.height = "50px";
+      const warningText = document.getElementById("text");
+      warningText.style.display = "none";
+      const warningText2 = document.getElementById("text2");
+      warningText2.style.display = "none";
+    }
+  };
+
+  for (e of expresso) {
     if (userInput.value.slice(0, 4) === e) {
       const carrierIndicator = document.getElementById("messageBox");
       carrierIndicator.style.display = "flex";
@@ -94,21 +132,25 @@ function valMobileNum() {
       // setting other networks display to none
       const glo_logo = document.getElementById("glo");
       glo_logo.style.display = "none";
-      const airtel_logo = document.getElementById("airtel");
-      airtel_logo.style.display = "none";
+      const airteltigo_logo = document.getElementById("airtel");
+      airteltigo_logo.style.display = "none";
+      const vodafone_logo = document.getElementById("vodafone");
+      vodafone_logo.style.display = "none";
       const mtn_logo = document.getElementById("mtn");
       mtn_logo.style.display = "none";
       //  done
-      const $9mobile_logo = document.getElementById("_9mobile");
-      $9mobile_logo.style.display = "flex";
-      $9mobile_logo.style.width = "40px";
-      $9mobile_logo.style.height = "70px";
+      const telkom_logo = document.getElementById("expresso");
+      telkom_logo.style.display = "flex";
+      telkom_logo.style.width = "50px";
+      telkom_logo.style.height = "50px";
       const warningText = document.getElementById("text");
       warningText.style.display = "none";
       const warningText2 = document.getElementById("text2");
       warningText2.style.display = "none";
     }
   };
+
+
   if (userInput.value === '') {
     const carrierIndicator = document.getElementById("messageBox");
     carrierIndicator.style.display = "none";
@@ -120,9 +162,9 @@ function valMobileNum() {
     warningText2.innerText = "Input Field Cannot be Empty!";
 
     console.log("Input Field Cannot be Empty!");
-  } else if (userInput.value.length === 11) {
+  } else if (userInput.value.length === 10) {
     console.log("Valid Phone Number!")
-  } else if (userInput.value.length > 0 || userInput.value.length < 11 && userInput.value.length > 11) {
+  } else if (userInput.value.length > 0 || userInput.value.length < 10 && userInput.value.length > 10) {
     const carrierIndicator = document.getElementById("messageBox");
     carrierIndicator.style.display = "none";
     const warningText2 = document.getElementById("text2");
@@ -133,5 +175,4 @@ function valMobileNum() {
     warningText.innerText = "Invalid! Confirm phone number length!";
     console.log("Invalid! Confirm phone number length!");
   };
-
-};
+}
